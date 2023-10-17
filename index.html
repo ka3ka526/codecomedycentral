@@ -1,33 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Cookie Example</title>
-</head>
-<body>
-    <button id="setCookieButton">Set Admin Cookie</button>
-
-    <script>
-       var cookies = document.cookie.split(';');
-var isAdmin = false;
-
-for (var i = 0; i < cookies.length; i++) {
-    var cookie = cookies[i].trim();
-    if (cookie.indexOf("admin=") === 0) {
-        if (cookie.substring("admin=".length) === "1") {
-            isAdmin = true;
-            break;
-        }
-    }
-}
-
-if (isAdmin) {
-    // Display a message for admin (admin == 1)
-    alert("Welcome, Administrator! You have special access.");
-} else {
-    // Display a message for non-admin (admin == 0)
-    alert("Welcome, User. You do not have admin privileges.");
-}
-    </script>
-    
-</body>
-</html>
+<!DOCTYPE html>  
+<html>  
+<head>  
+</head>  
+<body>  
+<input type="button" value="setCookie" onclick="setCookie()">  
+<input type="button" value="getCookie" onclick="getCookie()">  
+    <script>  
+    function setCookie()  
+    {  
+        document.cookie="username=Duke Martin";  
+    }  
+    function getCookie()  
+    {  
+        if(document.cookie.length!=0)  
+        {  
+        alert(document.cookie);  
+        }  
+        else  
+        {  
+        alert("Cookie not available");  
+        }  
+    }  
+    </script>  
+  
+</body>  
+</html>  
