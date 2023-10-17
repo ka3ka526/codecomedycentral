@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>codecomedycentral</title>
+    <title>Cookie Example</title>
 </head>
 <body>
+    <button id="setCookieButton">Set Admin Cookie</button>
 
+    <script>
+        // JavaScript to set the "admin" cookie when the button is clicked
+        document.getElementById("setCookieButton").addEventListener("click", function() {
+            // Set the "admin" cookie
+            document.cookie = "admin=1; expires=Fri, 31 Dec 9999 23:59:59 UTC; path=/";
+            alert("Admin cookie has been set.");
+        });
+    </script>
+    
 </body>
 </html>
